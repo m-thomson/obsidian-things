@@ -89,7 +89,7 @@ body {
 
     /* MT */
     -webkit-font-smoothing: antialiased;
-    --link-decoration-thickness: .05rem;
+    /*--link-decoration-thickness: .05rem;*/
 
     /*--inline-title-font: var(--font-monospace-theme);*/
     --inline-title-weight: 400;
