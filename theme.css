@@ -37,14 +37,30 @@ body {
     --purple: #9e86c8;
 
     --h1-color: var(--text-normal);
-    --h2-color: var(--text-normal);
+    --h2-color: var(--mt-faded-blue);
     --h3-color: var(--mt-faded-blue);
     --h4-color: var(--mt-faded-blue);
-    --h5-color: var(--red);
+    --h5-color: var(--text-muted);
     --h6-color: var(--text-muted);
 
-    --strong-color: var(--pink);
-    --em-color: var(--pink);
+    --h1-size: 1.7rem;
+    --h2-size: 1.5rem;
+    --h3-size: 1.3rem;
+    --h4-size: 1.2rem;
+    --h5-size: 1.1rem;
+    --h6-size: 1rem;
+
+    --h1-weight: 400;
+    --h2-weight: 500;
+    --h3-weight: 500;
+    --h4-weight: 500;
+    --h5-weight: 500;
+    --h6-weight: 400;
+
+    --strong-color: var(--text-normal);
+    --link-color: var(--text-normal);
+    --link-external-color: var(--mt-faded-blue);
+    --em-color: var(--text-normal);
     --quote-color: var(--green);
 
     --tag-background-color-l: #bde1d3;
@@ -62,20 +78,31 @@ body {
     --progress-color-4: #b0c07e;
     --progress-color-5: #768399;
 
+
+
     /* Font families */
     --font-text-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
     --font-editor-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-    --font-monospace-theme: 'JetBrains Mono', 'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
+    --font-monospace-theme:  'Fira Code', Menlo, SFMono-Regular, Consolas, 'Roboto Mono', monospace;
     --font-interface-theme: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Ubuntu, sans-serif;
-    --font-editor: var(--font-text-override),
-    var(--font-editor-theme);
+    --font-editor: var(--font-text-override), var(--font-editor-theme);
 
-    --h1-size: 1.7rem;
-    --h2-size: 1.5rem;
-    --h3-size: 1.2rem;
-    --h4-size: 1.1rem;
-    --h5-size: 1rem;
-    --h6-size: 0.9rem;
+    /* MT */
+    -webkit-font-smoothing: antialiased;
+    --link-decoration-thickness: .05rem;
+
+    /*--inline-title-font: var(--font-monospace-theme);*/
+    --inline-title-weight: 400;
+    --inline-title-size: 1.2em;
+
+    /*--metadata-label-font: var(--font-monospace-theme);*/
+    /*--metadata-input-font: var(--font-monospace-theme);*/
+    /*--metadata-label-font-weight: 100;*/
+    .metadata-properties-title {
+        /*font-family: var(--font-monospace-theme), monospace;*/
+    }
+
+    /* End MT */
 
     /* Misc */
     --checkbox-radius: 30%;
@@ -104,6 +131,11 @@ body {
     --code-block-background-l: #f0f2f5;
     --code-block-background-d: #282c34;
     --quote-background: transparent;
+
+    /* MT: Pare down padding for inline code inside headings */
+    .cm-s-obsidian .cm-header.cm-inline-code:not(.cm-formatting) {
+        padding:0.05em 0.2em;
+    }
 }
 
 /* COLOR SCHEMES
@@ -111,6 +143,13 @@ body {
 
 .theme-light,
 body.theme-light.is-mobile {
+
+    /* MT Added */
+    --text-highlight-bg-l: rgba(255, 208, 0, 0.4);
+    --text-highlight-bg: var(--text-highlight-bg-l);
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+    /* End MT */
+
     color-scheme: light;
     --highlight-mix-blend-mode: darken;
     --mono-rgb-0: 255, 255, 255;
@@ -153,9 +192,7 @@ body.theme-light.is-mobile {
     --background-secondary-alt: var(--color-base-05);
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
     --background-modifier-cover: rgba(220, 220, 220, 0.4);
-    --text-highlight-bg-l: rgba(255, 208, 0, 0.4);
-    --text-highlight-bg: var(--text-highlight-bg-l);
-    --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+
     --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.05),
     0 1px 1.5px 0 rgba(0, 0, 0, 0.03), 0 1px 2px 0 rgba(0, 0, 0, 0.04),
     0 0 0 0 transparent;
@@ -209,6 +246,12 @@ body.theme-light.is-mobile {
 
 .theme-dark,
 body.theme-dark.is-mobile {
+    /* MT Added */
+    --text-highlight-bg-d: rgb(65 128 199 / 0.4);
+    --text-highlight-bg: var(--text-highlight-bg-d);
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+    /* End MT */
+
     color-scheme: dark;
     --highlight-mix-blend-mode: lighten;
     --mono-rgb-0: 0, 0, 0;
@@ -252,9 +295,7 @@ body.theme-dark.is-mobile {
     --background-secondary-alt: var(--color-base-30);
     --interactive-normal: var(--color-base-30);
     --interactive-hover: var(--color-base-35);
-    --text-highlight-bg-d: rgba(255, 208, 0, 0.4);
-    --text-highlight-bg: var(--text-highlight-bg-d);
-    --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+
     --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
     --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
     0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 1px 1.5px 0 rgba(0, 0, 0, 0.1),
@@ -329,7 +370,7 @@ body.is-mobile.theme-dark.mobile-black-background {
 }
 
 .HyperMD-header.HyperMD-header-2.cm-line {
-    border-bottom: 2px solid var(--background-modifier-border);
+    border-bottom: 1px solid var(--background-modifier-border);
     padding-bottom: 2px;
 }
 
