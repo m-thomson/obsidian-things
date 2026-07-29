@@ -88,7 +88,7 @@ body {
     --font-editor: var(--font-text-override), var(--font-editor-theme);
 
     /* MT */
-    -webkit-font-smoothing: antialiased;
+    /*-webkit-font-smoothing: antialiased;*/
     /*--link-decoration-thickness: .05rem;*/
 
     /*--inline-title-font: var(--font-monospace-theme);*/
