@@ -1329,8 +1329,8 @@ body:not(.tasks) li[data-task='D'].task-list-item.is-checked {
 /* ─────────────────────────────────────────────────── */
 
 /* @settings
-name: Things Theme
-id: things-style
+name: MT Things Theme
+id: mt-things-style
 settings:
     -
         id: features
