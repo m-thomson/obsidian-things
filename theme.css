@@ -79,7 +79,7 @@ body {
     --progress-color-5: #768399;
 
     --vault-color: 120, 158, 120;
-    --vault-color-bg: #768399;
+    --vault-color-bg: #777777;
     --vault-color-fg: #FFFFFF;
 
     /* Font families */
@@ -1369,7 +1369,7 @@ settings:
         type: variable-color
         opacity: true
         format: hex
-        default: '#768399'
+        default: '#777777'
     -
         title: Vault FG Color
         id: vault-color-fg
