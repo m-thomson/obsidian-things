@@ -165,12 +165,20 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 
 /* Links to prefs. Requires setup with Supercharged Links */
-span[data-link-_type="pref"].data-link-text {
+span[data-link-_type="pref"].data-link-text,
+a[data-link-_type="pref"].data-link-text {
     font-family: var(--font-monospace-theme);
     font-size: 0.9em;
-    background-color: #d6d6d6;
-    border-radius: 0.2em;
-    padding:0.15em 0.3em;
+    border: 1px solid var(--text-normal);
+    border-radius: 0.4em;
+    padding:0.10em 0.2em;
+    text-decoration: none!important;
+    span.cm-underline {
+        text-decoration: none!important;
+    }
+}
+a.internal-link.data-link-icon:before {
+    text-decoration: none!important;
 }
 
 
