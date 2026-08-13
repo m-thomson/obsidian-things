@@ -164,6 +164,14 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     color: var(--vault-color-fg);
 }
 
+/* Links to prefs. Requires setup with Supercharged Links */
+span[data-link-_type="pref"].data-link-text {
+    font-family: var(--font-monospace-theme);
+    font-size: 0.9em;
+    background-color: #cfcfcf;
+    border-radius: 0.2em;
+    padding:0.15em 0.3em;
+}
 
 
 /* COLOR SCHEMES
