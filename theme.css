@@ -169,7 +169,7 @@ span[data-link-_type="pref"].data-link-text,
 a[data-link-_type="pref"].data-link-text {
     font-family: var(--font-monospace-theme);
     font-size: 0.9em;
-    border: 1px solid var(--text-normal);
+    border: 1px solid var(--text-accent);
     border-radius: 0.4em;
     padding:0.10em 0.2em;
     text-decoration: none!important;
