@@ -57,6 +57,17 @@ body {
     --h5-weight: 500;
     --h6-weight: 500;
 
+    /* MT: Mellow out the margin between h5/h6 headings and the subsequent text.
+       this is useful especially for glossary definitions that use h5+h6. */
+    .markdown-rendered .el-h5:has(+ .el-p) > h5,
+    .markdown-rendered .el-h6:has(+ .el-p) > h6 {
+        margin-block-end: 0.25em;
+    }
+    .markdown-rendered .el-h5 + .el-p > p,
+    .markdown-rendered .el-h6 + .el-p > p {
+        margin-block-start: 0;
+    }
+
     --strong-color: var(--text-normal);
     --link-color: var(--text-normal);
     --link-external-color: var(--mt-faded-blue);
