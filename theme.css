@@ -68,6 +68,15 @@ body {
         margin-block-start: 0;
     }
 
+    .markdown-embed {
+        font-style: var(--embed-font-style);
+        margin: 0;
+        background: #eeeef6;
+        border-radius: 5px;
+        border: 1px solid lightsteelblue;
+        padding: 1rem 1rem 1rem 0;
+    }
+
     --strong-color: var(--text-normal);
     --link-color: var(--text-normal);
     --link-external-color: var(--mt-faded-blue);
