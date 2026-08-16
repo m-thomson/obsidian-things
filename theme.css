@@ -1,14 +1,12 @@
 @charset "UTF-8";
 /*───────────────────────────────────────────────────────
-THINGS
+MT THINGS
 Version 2.2.4
-Created by @colineckert
+Forked from theme created by @colineckert
 
-Readme:
+Original Readme:
 https://github.com/colineckert/obsidian-things
 
-Support my work:
-https://www.buymeacoffee.com/colineckert
 ────────────────────────────────────────────────────── */
 
 /* ─────────────────────────────────────────────────── */
@@ -25,6 +23,7 @@ body {
     --accent-s: 75%; /* Accent saturation */
     --accent-d: 70%; /* Accent lightness Dark Mode */
     --accent-l: 60%; /* Accent lightness Light Mode */
+
     /* MT Added */
     --mt-faded-blue: #6886B2;
 
@@ -71,9 +70,7 @@ body {
     .markdown-embed {
         font-style: var(--embed-font-style);
         margin: 0;
-        background: #eeeef6;
         border-radius: 5px;
-        border: 1px solid lightsteelblue;
         padding: 1rem 1rem 1rem 0;
     }
 
@@ -153,6 +150,10 @@ body {
     --code-block-background-l: #f0f2f5;
     --code-block-background-d: #282c34;
     --quote-background: transparent;
+}
+
+/* MT Customize */
+body {
     .cm-header, .cm-header-6 {
         -webkit-font-smoothing: subpixel-antialiased;
     }
@@ -161,59 +162,57 @@ body {
     .cm-s-obsidian .cm-header.cm-inline-code:not(.cm-formatting) {
         padding:0.05em 0.2em;
     }
-}
 
-/* Top Right Icon */
-.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
-    .clickable-icon {
-        color:var(--vault-color-fg);
+    /* Top Right Icon Colour */
+    &.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
+        .clickable-icon {
+            color:var(--vault-color-fg);
+        }
+        background-color: var(--vault-color-bg);
     }
-    background-color: var(--vault-color-bg);
-}
 
-/* Bottom Left Vault Switcher */
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
-    .workspace-drawer-vault-switcher,.workspace-drawer-vault-switcher-icon, .clickable-icon {
-        color:var(--vault-color-fg);
+    /* Bottom Left Vault Switcher */
+    &:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+        .workspace-drawer-vault-switcher,.workspace-drawer-vault-switcher-icon, .clickable-icon {
+            color:var(--vault-color-fg);
+        }
+        background-color: var(--vault-color-bg);
     }
-    background-color: var(--vault-color-bg);
-}
 
-/* Lower Right status Bar */
-.status-bar {
-    background-color: var(--vault-color-bg) ;
-    color: var(--vault-color-fg);
-}
+    /* Lower Right status Bar */
+    .status-bar {
+        background-color: var(--vault-color-bg) ;
+        color: var(--vault-color-fg);
+    }
 
-/* Links to prefs. Requires setup with Supercharged Links */
-span[data-link-_type="pref"].data-link-text,
-a[data-link-_type="pref"].data-link-text {
-    font-family: var(--font-monospace-theme), monospace;
-    font-size: 0.9em;
-    border: 1px solid var(--text-accent);
-    border-radius: 0.4em;
-    padding:0.10em 0.2em;
-    text-decoration: none!important;
-    span.cm-underline {
+    /* Links to prefs. Requires setup with Supercharged Links */
+    span[data-link-_type="pref"].data-link-text,
+    a[data-link-_type="pref"].data-link-text {
+        font-family: var(--font-monospace-theme), monospace;
+        font-size: 0.9em;
+        border: 1px solid var(--text-accent);
+        border-radius: 0.4em;
+        padding:0.10em 0.2em;
+        text-decoration: none!important;
+        span.cm-underline {
+            text-decoration: none!important;
+        }
+    }
+
+    a.internal-link.data-link-icon:before {
         text-decoration: none!important;
     }
+
+    /* MT: Heading paddings. Applies when a blank line precedes the heading. */
+    .cm-line:not(.HyperMD-header):has(>br:only-child) + .cm-line.HyperMD-header {
+        padding-top:.2em
+    }
+
+    .callout[data-callout="definition"] {
+        --callout-color: #7c3aed;
+        --callout-icon: lucide-book-open;
+    }
 }
-
-a.internal-link.data-link-icon:before {
-    text-decoration: none!important;
-}
-
-/* MT: Heading paddings. Applies when a blank line precedes the heading. */
-.cm-line:not(.HyperMD-header):has(>br:only-child) + .cm-line.HyperMD-header {
-    padding-top:.2em
-}
-
-.callout[data-callout="definition"] {
-    --callout-color: #7c3aed;
-    --callout-icon: lucide-book-open;
-}
-
-
 /* COLOR SCHEMES
 ────────────────────────────────────────────────────── */
 
@@ -224,6 +223,10 @@ body.theme-light.is-mobile {
     --text-highlight-bg-l: rgba(255, 208, 0, 0.4);
     --text-highlight-bg: var(--text-highlight-bg-l);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+    .markdown-embed {
+        background: #eeeef6;
+        border: 1px solid lightsteelblue;
+    }
     /* End MT */
 
     color-scheme: light;
@@ -326,6 +329,10 @@ body.theme-dark.is-mobile {
     --text-highlight-bg-d: rgb(65 128 199 / 0.4);
     --text-highlight-bg: var(--text-highlight-bg-d);
     --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+    .markdown-embed {
+        background: #222229;
+        border: 1px solid #333333;
+    }
     /* End MT */
 
     color-scheme: dark;
