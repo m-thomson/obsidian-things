@@ -212,7 +212,30 @@ body {
         --callout-color: #7c3aed;
         --callout-icon: lucide-book-open;
     }
+
+    /* Wiki Glossary tweaks */
+    :is(
+        .wiki-glossary,
+        /* Embeds don't support cssclass so we need to key off page title */
+        .internal-embed[src*='1.1 Glossary'],
+        .internal-embed[src*='glossary']
+    ) {
+        &.markdown-rendered h6::before,
+        .markdown-rendered h6::before,
+        .cm-line:not(.cm-active) .cm-header-6:not(.cm-formatting)::before {
+            content: '↳';
+            color: var(--mt-faded-blue);
+            padding-right: .1rem;
+            pointer-events: none;
+            user-select: none;
+        }
+        --h4-size: 1.2rem;
+        --h5-size: 1.1rem;
+        --h5-color: var(--mt-faded-blue);
+    }
 }
+
+
 /* COLOR SCHEMES
 ────────────────────────────────────────────────────── */
 
