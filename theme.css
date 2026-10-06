@@ -70,6 +70,16 @@ body {
     --h5-line-height: 1.2;
     --h6-line-height: 1.2;
 
+    /* MT: Code and emphasis in headings should adopt heading color */
+    span.cm-header.cm-inline-code,
+    span.cm-header.cm-em {
+        color:var(--mt-faded-blue) !important;
+    }
+    span.cm-header-1.cm-inline-code,
+    span.cm-header-1.cm-em {
+        color:var(--text-normal) !important;
+    }
+
     /* MT: Mellow out the margin between h5/h6 headings and the subsequent text.
        this is useful especially for glossary definitions that use h5+h6. */
     .markdown-rendered .el-h5:has(+ .el-p) > h5,
