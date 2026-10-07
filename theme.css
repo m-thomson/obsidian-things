@@ -195,7 +195,7 @@ body {
 
     /* MT: Pare down padding for inline code inside headings */
     .cm-s-obsidian .cm-header.cm-inline-code:not(.cm-formatting) {
-        padding:0.05em 0.2em;
+        padding:0.03em 0.2em;
     }
 
     /* Top Right Icon Colour */
