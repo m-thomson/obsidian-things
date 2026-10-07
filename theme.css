@@ -145,6 +145,17 @@ body {
         /*font-family: var(--font-monospace-theme), monospace;*/
     }
 
+    /* MT: The Strange New Worlds Obsidian plugin allows showing link counts inline.
+       This disables the annotation on _outbound_ links showing the link count.
+       I prefer only having this annotation on the destination (ie headers).
+       https://github.com/tfthacker/obsidian42-strange-new-worlds
+    */
+    .snw-link {
+        display:none;
+    }
+    /* This sets the opacity for the link count in the same plugin. Default is 0.4 */
+    --snw-counter-opacity: 0.6;
+
     /* End MT */
 
     /* Misc */
