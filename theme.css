@@ -2,7 +2,7 @@
 /*───────────────────────────────────────────────────────
 MT THINGS
 Version 2.2.4
-Forked from theme created by @colineckert
+Forked from "Things" theme created by @colineckert
 
 Original Readme:
 https://github.com/colineckert/obsidian-things
@@ -40,7 +40,7 @@ body {
     --h3-color: var(--mt-faded-blue);
     --h4-color: var(--mt-faded-blue);
     --h5-color: var(--mt-faded-blue);
-    --h6-color: var(--mt-faded-blue);
+    --h6-color: var(--text-normal);
 
     --h1-size: 1.7rem;
     --h2-size: 1.5rem;
@@ -54,8 +54,8 @@ body {
     --h2-weight: 500;
     --h3-weight: 500;
     --h4-weight: 400;
-    --h5-weight: 400;
-    --h6-weight: 400;
+    --h5-weight: 300;
+    --h6-weight: 500;
 
     --h1-letter-spacing: normal;
     --h2-letter-spacing: normal;
