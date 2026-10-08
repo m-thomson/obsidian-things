@@ -73,11 +73,7 @@ body {
     /* MT: Code and emphasis in headings should adopt heading color */
     span.cm-header.cm-inline-code,
     span.cm-header.cm-em {
-        color:var(--mt-faded-blue) !important;
-    }
-    span.cm-header-1.cm-inline-code,
-    span.cm-header-1.cm-em {
-        color:var(--text-normal) !important;
+        color: inherit;
     }
 
     /* MT: Mellow out the margin between h5/h6 headings and the subsequent text.
@@ -101,7 +97,7 @@ body {
     --strong-color: var(--text-normal);
     --link-color: var(--text-normal);
     --link-external-color: var(--mt-faded-blue);
-    --em-color: var(--text-normal);
+    --em-color: inherit;
     --quote-color: var(--green);
 
     --tag-background-color-l: #bde1d3;
@@ -383,15 +379,7 @@ body.theme-light.is-mobile {
 
 .theme-dark,
 body.theme-dark.is-mobile {
-    /* MT Added */
-    --text-highlight-bg-d: rgb(65 128 199 / 0.4);
-    --text-highlight-bg: var(--text-highlight-bg-d);
-    --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
-    .markdown-embed {
-        background: #222229;
-        border: 1px solid #333333;
-    }
-    /* End MT */
+
 
     color-scheme: dark;
     --highlight-mix-blend-mode: lighten;
@@ -476,6 +464,16 @@ body.theme-dark.is-mobile {
     --atom-purple: #c678dd;
     --atom-blue: #61afef;
     --atom-yellow: #e5c07b;
+
+    /* MT Added */
+    --text-highlight-bg-d: var(--atom-purple);
+    --text-highlight-bg: var(--text-highlight-bg-d);
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+    .markdown-embed {
+        background: #222229;
+        border: 1px solid #333333;
+    }
+    /* End MT */
 }
 
 body.is-mobile.theme-dark.mobile-black-background {
