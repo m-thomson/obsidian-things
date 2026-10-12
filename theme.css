@@ -165,6 +165,10 @@ body {
     --radius-l: 10px;
     --radius-xl: 16px;
 
+    /* MT: this controls line width. The --line-width var
+    doesn't appear to do anything.
+     */
+    --file-line-width: 800px;
     --line-width: 40rem;
     --line-height: 1.5;
     --max-width: 90%;
